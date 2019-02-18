@@ -1,0 +1,100 @@
+{
+    "RECORDS": [
+        {
+            "ID": "1", 
+            "MALL_CATEGORY_NAME": "最新到店", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 1, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "2", 
+            "MALL_CATEGORY_NAME": "职业女装", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 2, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "3", 
+            "MALL_CATEGORY_NAME": "职业男装", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 3, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "4", 
+            "MALL_CATEGORY_NAME": "男士上衣", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 4, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "5", 
+            "MALL_CATEGORY_NAME": "男士下衣", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 5, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "6", 
+            "MALL_CATEGORY_NAME": "女士上衣", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 6, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "7", 
+            "MALL_CATEGORY_NAME": "女士下衣", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 7, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "8", 
+            "MALL_CATEGORY_NAME": "裙子", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 8, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "9", 
+            "MALL_CATEGORY_NAME": "男士领带", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 9, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "10", 
+            "MALL_CATEGORY_NAME": "女士领带", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 10, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "11", 
+            "MALL_CATEGORY_NAME": "男士衬衣", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 11, 
+            "COMMENTS": null
+        }, 
+        {
+            "ID": "12", 
+            "MALL_CATEGORY_NAME": "女士衬衣", 
+            "IMAGE": "http://images.baixingliangfan.cn/firstCategoryPicture/20180408/20180408112010_4489.png", 
+            "TYPE": 2, 
+            "SORT": 12, 
+            "COMMENTS": null
+        }
+    ]
+}

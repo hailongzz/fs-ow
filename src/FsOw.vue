@@ -1,16 +1,18 @@
 <template>
   <div id="FsOw">
-    <Index/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Index from './components/Index.vue'
 
 export default {
   name: 'FsOw',
-  components: {
-    Index
-  }
 }
 </script>
+<style lang="scss">
+  a{
+    text-decoration: none;
+    color: #909399;
+    }
+</style>
