@@ -159,7 +159,8 @@
                     if(res.data.code == 200){
                       new Promise((resolve,reject)=>{
                           localStorage.userInfo=JSON.stringify({userName:this.username})
-                      }).then(()=>{
+                          resolve()
+                        }).then(()=>{
                           this.$message({
                             message: '登录成功',
                             type: 'success'

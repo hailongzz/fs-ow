@@ -18,47 +18,8 @@
      <div> 
          <router-link to="">职装系列</router-link>
      </div> 
-     <div> 
-        <router-link to="">最新到店</router-link>
-    </div>
-    <div> 
-        <router-link to="">职业女装</router-link>
-    </div>
-    <div> 
-        <router-link to="">职业男装</router-link>
-    </div>
-    <div> 
-        <router-link to="">男士上衣</router-link>
-    </div>
-    <div> 
-        <router-link to="">男士下衣</router-link>
-    </div>
-    <div> 
-        <router-link to="">女士上衣</router-link>
-    </div>
-    <div> 
-        <router-link to="">女士下衣</router-link>
-    </div>
-    <div> 
-        <router-link to="">裙子</router-link>
-    </div>
-    <div> 
-        <router-link to="">男士套装</router-link>
-    </div>
-     <div> 
-        <router-link to="">女士套装</router-link>
-    </div>
-    <div> 
-        <router-link to="">男士领带</router-link>
-    </div>
-    <div> 
-        <router-link to="">女士领带</router-link>
-    </div>
-    <div> 
-        <router-link to="">女士衬衣</router-link>
-    </div>
-    <div> 
-        <router-link to="">男士衬衣</router-link>
+     <div v-for="(item,index) in categorySub" :key="index"> 
+        <router-link :to="{path:'/GoodsMall', query:{id:item.ID}}">{{item.MALL_CATEGORY_NAME}}</router-link>
     </div>
     </ul> 
    </div> 
@@ -66,15 +27,16 @@
     <div class="pro-line2">
      <span>/国博系列</span>
     </div> 
-    <ul id="sele"> 
-     <li class="sele-title"><a class="sele-more">排 序</a> 
-      <ul class="slist" style="display: none;"> 
-       <li><a href="javascript:productSort(6);">上 新 时 间</a></li> 
-       <li><a href="javascript:productSort(5);">销 量 排 行</a></li> 
-       <li><a href="javascript:productSort(4);">价格从高到底</a></li> 
-       <li><a href="javascript:productSort(3);">价格从低到高</a></li> 
-      </ul> 
-      </li> 
+    <ul id="sele">
+        <el-dropdown size="medium" split-button >
+                排&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;序
+        <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>上 新 时 间</el-dropdown-item>
+            <el-dropdown-item>销 量 排 行</el-dropdown-item>
+            <el-dropdown-item>价格从高到底</el-dropdown-item>
+            <el-dropdown-item>价格从低到高</el-dropdown-item>
+        </el-dropdown-menu>
+        </el-dropdown>
      <div class="clear"></div> 
     </ul> 
     <div class="pages1">
@@ -110,16 +72,34 @@
 </template>
 
 <script>
+    import axios from 'axios'
+    import url from '../serviceAPI.config.js'
     import Header from '../views/components/header'
     import Footer from '../views/components/footer'
     export default {
         data() {
             return {
+                categorySub:'',
                 totalpag:3
             }
         },
-        
-    components:{Header,Footer},
+        created(){
+            this.getCategory()
+        },
+        methods:{
+            getCategory(){
+                axios({
+                    url:url.category,
+                    method:'get'
+                }).then((res)=>{
+                    this.categorySub = res.data.message
+                    console.log(this.categorySub)
+                }).catch((err)=>{
+                    console.log(err)
+                })
+            }
+        },
+        components:{Header,Footer},
     }
 </script>
 

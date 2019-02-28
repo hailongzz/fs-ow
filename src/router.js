@@ -3,9 +3,9 @@ import Router from 'vue-router'
 import Index from './views/Index.vue'
 import LoginAndRegister from './views/LoginAndRegister.vue'
 import GoodsMall from './views/GoodsMall.vue'
-import Promotion from './views/Promotion.vue'
-import News from './views/News.vue'
-import Storefront from './views/Storefront.vue'
+import Promotion from './views/page/Promotion.vue'
+import News from './views/page/News.vue'
+import Storefront from './views/page/Storefront.vue'
 
 Vue.use(Router)
 

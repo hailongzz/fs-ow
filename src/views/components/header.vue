@@ -12,15 +12,15 @@
        登录/注册
       </router-link>
        <router-link v-show='showUser==true' to="/">
-       {{userInfo}}
+       {{userInfo}} <span class="Logout" @click="Logout">注销</span>
       </router-link>
       <router-link to="/">
        <i class="icon iconfont icon-gouwuche"></i> 购物车
       </router-link> 
-      <router-link to="/">
+      <router-link to="/Communication">
        在线客服
       </router-link>
-      <router-link to="/">
+      <router-link to="/Storefront">
        联系我们
       </router-link>  
      </div> 
@@ -41,51 +41,16 @@
                 <div class="inner"> 
                     <div class="left l1"> 
                     <div class="left_espot"> 
-                        <a style="color:black;" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501"><b>最 新 到 店</b></a>
-                        <a style="color:black;" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/21501"><b>最 热 单 品</b></a> 
+                        <router-link to="/GoodsMall"><b>最 新 到 店</b></router-link>
+                        <router-link to="/GoodsMall"><b>最 热 单 品</b></router-link>
                     </div> 
                     </div> 
-                    <div class="left l2"> 
+                    <div class="left l2">
                     <router-link to="/GoodsMall"><b>所 有 产 品</b></router-link>
-                    <div class="half"> 
-                    <a id="departmentLink_27503" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/27503" >国博系列 </a> 
+                    <div class="half" v-for="(item,index) in categorySub" :key="index"> 
+                    <router-link :to="{path:'/GoodsMall', query:{id:item.ID}}">{{item.MALL_CATEGORY_NAME}}</router-link>
                     </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_19501" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501" >最新到店 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_21501" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/21501">冬季5折起 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_24002" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/24002">大衣 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_15504" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15504">外套 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_24502" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/24502">羽绒服 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_24003" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/24003">针织衫 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_15506" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15506">套头衫 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_15511" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15511">衬衫 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_15505" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15505">连衣裙 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_15508" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15508">裤子 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_15507" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15507">裙子 </a> 
-                    </div> 
-                    <div class="half"> 
-                    <a id="departmentLink_15510" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15510">饰品 </a> 
-                    </div> 
+                    
                     <div class="clear"></div> 
                     </div> 
                     <div class="right">
@@ -138,9 +103,12 @@
 </template>
 
 <script>
-     export default {
+    import url from '../../serviceAPI.config.js'
+    import axios from 'axios'
+    export default {
     data() {
       return {
+        categorySub:'',
         showUser:'',
         userInfo:'',
         navStyle:false,
@@ -154,17 +122,18 @@
       }
     },
     created(){
-        
-            
-            if(this.userInfo){
+        this.getCategory()
+        if(!localStorage.userInfo){
+                this.showUser = false
+                console.log(111)
+            }else{
+                console.log(this.userInfo)
                 let user = JSON.stringify(localStorage.userInfo)
                 let User = JSON.parse(user)
                 User = JSON.parse(User)
                 this.userInfo = User.userName
                 console.log(User.userName)
                 this.showUser = true
-            }else{
-                this.showUser = false
             }
             console.log(this.showUser)
     },
@@ -173,7 +142,23 @@
         return { value: item, label: item };
       });
     },
+    
     methods: {
+        Logout(){
+            localStorage.removeItem('userInfo')
+            this.showUser = false
+        },
+        getCategory(){
+            axios({
+                url:url.category,
+                method:'get'
+            }).then((res)=>{
+                this.categorySub = res.data.message
+                console.log(this.categorySub)
+            }).catch((err)=>{
+                console.log(err)
+            })
+        },
         showStyle(a){
             if(a==0){
              this.navStyle=true
@@ -209,6 +194,10 @@
 </script>
 
 <style scoped lang='scss'> 
+    .Logout{
+        font-weight: 700;
+        color: gray;
+    }
     .inner {
     width: 990px;
     margin: 0 auto;
@@ -284,7 +273,7 @@
                 float: right;
                 a{
                 display: inline-block;
-                width: 80px;
+                margin: 0 15px;
                 text-align: center;
                 }
             }

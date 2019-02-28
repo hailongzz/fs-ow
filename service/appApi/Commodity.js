@@ -25,5 +25,14 @@ router.get('/insertCategory',async(ctx)=>{
 // router.post('/insertCommodity',async(ctx)=>{
 
 // })
+router.get('/category', async(ctx)=>{
+    try {
+        let categoryList = mongoose.model('Category')
+        let result = await categoryList.find().exec()
+        ctx.body = {code:200,message:result}
+    } catch (err) {
+        ctx.body = {code:500,message:err}
+    }
+})
 
 module.exports = router

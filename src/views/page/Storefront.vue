@@ -37,8 +37,8 @@
 </template>
 
 <script>
-    import Header from '../views/components/header'
-    import Footer from '../views/components/footer'
+    import Header from '../../views/components/header'
+    import Footer from '../../views/components/footer'
     export default {
         data() {
             return {
@@ -92,7 +92,7 @@
             }
         }
         .pro-line2 {
-            background: url(../assets/dot-line-333.gif) repeat-x center;
+            background: url(../../assets/dot-line-333.gif) repeat-x center;
             margin: 0 auto 20px auto;
             max-width: 990px;
             span {
