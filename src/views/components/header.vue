@@ -17,7 +17,7 @@
       <router-link to="/">
        <i class="icon iconfont icon-gouwuche"></i> 购物车
       </router-link> 
-      <router-link to="/Communication">
+      <router-link >
        在线客服
       </router-link>
       <router-link to="/Storefront">
@@ -54,7 +54,7 @@
                     <div class="clear"></div> 
                     </div> 
                     <div class="right">
-                        <a href="#"><img src="https://pic.lily.sh.cn/PC%E7%AB%AF19%E6%98%A51%E6%B3%A2%E4%B8%8B%E6%8B%89%E9%A1%B51.jpg
+                        <a href="#"><img src="http://www.zgmypfzx.com/data/201703/170328114940324.jpg
                         " /></a>
             </div>
             <div class="clear"></div> 
@@ -79,7 +79,7 @@
                 <!-- BEGIN Content_UI.jspf --> 
                 <div class="left_espot"> 
                 <div class="right">
-                    <a href="#"><img src="https://pic.lily.sh.cn/PC%E7%AB%AF19%E6%98%A51%E6%B3%A2%E4%B8%8B%E6%8B%89%E9%A1%B52.jpg
+                    <a href="#"><img src="http://www.zgmypfzx.com/data/201704/170409160543811.jpg
             " /></a>
                 </div> 
                 </div> 

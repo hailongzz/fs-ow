@@ -1,4 +1,4 @@
-const LOCALURL = 'http://localhost:3000/'
+const LOCALURL = 'http://localhost:3001/'
 const URL = {
         register:LOCALURL+'user/register',//register page
         login:LOCALURL+'user/login',

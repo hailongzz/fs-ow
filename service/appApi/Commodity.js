@@ -35,4 +35,9 @@ router.get('/category', async(ctx)=>{
     }
 })
 
+router.get('/getCategoryList', async(ctx, next)=>{
+    let body = ctx.request.body
+    
+    console.log(body)
+})
 module.exports = router

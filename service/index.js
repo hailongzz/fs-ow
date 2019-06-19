@@ -29,6 +29,6 @@ app.use(router.allowedMethods())
 app.use(async(ctx)=>{
     ctx.body = `<h1>koa</h1>`
 })
-app.listen('3000',()=>{
+app.listen('3001',()=>{
     console.log('[Server] starting at port 3000')
 })

@@ -5,7 +5,7 @@
             <div class="big"> 
                 <img alt="" src="../../assets/logo.jpg" /> 
                 <p>年轻OL的商务着装，可能太严肃，可能太时髦，</p> 
-                <p>或者像Lily这样，正合适。</p> 
+                <p>或者像大红服饰这样，正合适。</p> 
             </div> 
             <div class="left"> 
                 <p class="title">首页</p> 
@@ -26,7 +26,7 @@
                 </router-link>
             </div> 
             <div class="left"> 
-                <p class="title">关于Lily</p> 
+                <p class="title">关于大红服饰</p> 
                 <router-link to="/Storefront">
                 &middot; 联系我们
                 </router-link>
@@ -39,14 +39,14 @@
             </div> 
             <div class="right"> 
                 <p class="title">订阅通讯</p> 
-                <p>立即注册，了解Lily最新活动咨询</p> 
+                <p>立即注册，了解大红服饰最新活动咨询</p> 
                 <p><router-link to="/LoginAndRegister">
                 &middot; 立即注册
                 </router-link> </p>
             </div> 
             <div class="clear"></div> 
             <hr class="idx-hr" /> 
-            <p class="copyright">Copyright&copy;2015-2016，lily版权所有 <a href="http://www.miitbeian.gov.cn">沪ICP备05036513号-1</a></p> 
+            <p class="copyright">Copyright&copy;2015-2016，大红服饰版权所有 <a href="http://www.miitbeian.gov.cn">苏ICP备19011156号</a></p> 
             </div> 
      </div> 
     </div>

@@ -18,14 +18,14 @@
      <div> 
          <router-link to="">职装系列</router-link>
      </div> 
-     <div v-for="(item,index) in categorySub" :key="index"> 
-        <router-link :to="{path:'/GoodsMall', query:{id:item.ID}}">{{item.MALL_CATEGORY_NAME}}</router-link>
+     <div > 
+        <router-link :to="{path:'/GoodsMall'}">全部商品</router-link>
     </div>
     </ul> 
    </div> 
    <div id="prolist-right"> 
     <div class="pro-line2">
-     <span>/国博系列</span>
+     <span>/职装系列</span>
     </div> 
     <ul id="sele">
         <el-dropdown size="medium" split-button >
@@ -39,31 +39,32 @@
         </el-dropdown>
      <div class="clear"></div> 
     </ul> 
-    <div class="pages1">
-     <a href="javascript:sortpage();"><strong>上一页</strong></a>
-     <strong><a class="tpageNumber">1</a>/<a class="totalpag">{{totalpag}}</a><a href="#">下一页</a></strong>
-    </div> 
-     <ul id="pro-list" class="pro-list showmore"> 
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/229739"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119100G1212.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 长款牛仔风衣</span><b><span class="infos">&yen;1299.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/230556"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119110B1308.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 渐变色毛针织衫</span><b><span class="infos">&yen;1399.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/232366"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119110C1262.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 不对称压褶风衣</span><b><span class="infos">&yen;1299.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/232374"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119110C1255.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 长款系带风衣</span><b><span class="infos">&yen;1099.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/233238"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119100C1250.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 两种穿法风衣</span><b><span class="infos">&yen;1299.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/233511"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119110C1226.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 格纹长款风衣</span><b><span class="infos">&yen;1399.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/233536"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119110C1235.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 双排扣收腰风衣</span><b><span class="infos">&yen;1199.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/232385"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119110C2229.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 方巾收腰西装</span><b><span class="infos">&yen;899.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/233252"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119100C2226.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 气质双排扣西装</span><b><span class="infos">&yen;899.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/233552"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119110C2219.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 双排扣收腰西装</span><b><span class="infos">&yen;1099.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/229751"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119100G3207.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 宽松牛仔短外套</span><b><span class="infos">&yen;749.00</span></b></li>
-   <li style="position: relative;"><a title="" target="_blank" href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501/229879"><img width="232" height="232" more="http://localhost/webapp/wcs/stores/emall/images/prolist_03.jpg" src="http://pic.lily.sh.cn/119110B3309.jpg?imageView2/1/w/762/h/762/q/90 " onerror="javascript:this.src='/wcsstore/emall/mobile30/images/320.jpg'" /></a><span class="infos"> 拉链毛针织衫</span><b><span class="infos">&yen;649.00</span></b></li>
-  </ul>
-    <div class="clear"></div> 
+
     <div class="pages1"> 
-     <a href="javascript:sortpage();"><strong>上一页</strong></a>
-     <strong>&nbsp;<a class="tpageNumber">1</a>/<a class="totalpag">{{totalpag}}</a><a href="#">下一页</a></strong> 
-     <input type="text" name="page" id="mytext" style="width:30px" /> 
-     <input type="submit" value="跳转" class="sub" /> 
+      <el-pagination
+      @current-change = "cPage"
+    @prev-click = "prevClick"
+    @next-click = "nextClick"
+    layout="prev, pager, next"
+    :total="totalpag">
+  </el-pagination>
     </div> 
+    <ul v-loading="loading"
+    element-loading-text="拼命加载中"
+    element-loading-spinner="el-icon-loading"
+    element-loading-background="rgba(0, 0, 0, 0.8)"
+    id="pro-list" class="pro-list showmore"> 
+        <li style="position: relative;" v-for="(item,index) in shopPrve" :key="index">
+            <a href="#">
+                <img alt="" :src="item.url" />
+            </a>
+            <span class="infos"> {{item.name}}</span>
+            <b>
+            <span class="infos">&yen;{{item.price}}</span>
+            </b>
+         </li>
+    </ul>
+    <div class="clear"></div> 
    </div> 
   </div>
   <div class="clear"></div>
@@ -79,14 +80,204 @@
     export default {
         data() {
             return {
-                categorySub:'',
-                totalpag:3
+                loading:false,
+                categorySub:[
+
+                ],
+                totalpag:0,
+                currentPage: 0,//当前页数
+                shopPrve:[],
+                cur:1,
+                shopList:[
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/257/440/10624044752_1082870435.230x230.jpg',
+                       name:'2019春夏装新款修身小西服女中袖气质小西装一粒扣女式格纹外套',
+                       price: 163,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2017/350/235/3872532053_1082870435.230x230.jpg',
+                       name:'夏季新款短袖职业女装衬衫修身显瘦工作服气质面试白领条纹衬衣女',
+                       price: 134,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/820/611/10655116028_1082870435.230x230.jpg',
+                       name:'一件代发韩版条纹小西装外套女办公室OL职业装春夏季修身西服外套',
+                       price: 163,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/682/937/10444739286_1082870435.230x230.jpg',
+                       name:'2019夏季新款五分袖连衣裙女OL时尚气质修身职业装美容师工作服OL',
+                       price: 172,
+                    },
+                    {
+                       url:'//cbu01.alicdn.com/img/ibank/2016/840/998/3408899048_1082870435.230x230.jpg',
+                       name:'二粒扣职业装女士马甲套装面试装空姐装KTV酒吧工作制服学生',
+                       price: 163,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2018/995/500/9412005599_1082870435.230x230.jpg',
+                       name:'2018秋冬新款毛呢格子小西装女士韩版气质通勤职业长袖小西服外套',
+                       price: 180,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/217/216/10853612712_1082870435.230x230.jpg',
+                       name:'2019夏新款圆领连衣裙中袖包臀一步裙女士职业装美容师技师工作服',
+                       price: 163,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/417/739/10780937714_1082870435.230x230.jpg',
+                       name:'2019夏季小西装女韩版时尚职业女裙商务套装短袖职业装批发工作服',
+                       price: 155,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/624/441/10636144426_1082870435.230x230.jpg',
+                       name:'春夏季新款职业短袖套装酒店工作服白领通勤办公室西服珠宝店制服',
+                       price: 145,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2018/977/905/8621509779_1082870435.230x230.jpg',
+                       name:'夏季短袖酒店前台职业套装女2018新款时尚气质OL正装工作服两件套',
+                       price: 145,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2017/281/093/5316390182_1082870435.230x230.jpg',
+                       name:'2017职业装女装套装时尚西装连衣裙ol气质工作服女夏秋正装套装裙',
+                       price: 120,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/185/480/10590084581_1082870435.230x230.jpg',
+                       name:'2019夏新款时尚气质修身职业装白衬衫女中袖雪纺衬衣工作服喇叭袖',
+                       price: 105,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2018/413/964/10181469314_1082870435.230x230.jpg',
+                       name:'中袖上衣女夏秋春装雪纺衬衫韩版时尚百搭喇叭袖2019新款大码衬衣',
+                       price: 95,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/446/788/10644887644_1082870435.230x230.jpg',
+                       name:'2019夏季新款时尚气质修身职业装白衬衫女短袖正装衬衣白领工作服',
+                       price: 88,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/672/823/10566328276_1082870435.230x230.jpg',
+                       name:'2019夏季新款条纹衬衫粉色教师酒店美容师工作服短袖拼接领衬衣女',
+                       price: 87,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/241/556/10417655142_1082870435.230x230.jpg',
+                       name:'爆款2019新款纯色雪纺上衣女修身飘带长袖衬衫时尚优雅职业女装',
+                       price: 98,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/519/669/10585966915_1082870435.230x230.jpg',
+                       name:'酒店前台工作服夏装女空姐收银员经理职业套装美容师工作服短袖OL',
+                       price: 105,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2018/409/466/8704664904_1082870435.230x230.jpg',
+                       name:'2018新品条纹衬衫翻领短袖衬衣职业装正装男女同款白领面试商务棉',
+                       price: 98,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2018/985/334/8689433589_1082870435.230x230.jpg',
+                       name:'2018新款女装韩版修身立领雪纺衬衫打底衫修身显瘦衬衣女款中袖',
+                       price: 88,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/695/240/10410042596_1082870435.230x230.jpg',
+                       name:'夏季新款职业装短袖套装时尚OL韩版修身西装格子工作服业务工装女',
+                       price: 132,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/446/631/10512136644_1082870435.230x230.jpg',
+                       name:'2019夏季时尚OL红色短袖职业女裙套装面试销售正装工作西服批发',
+                       price: 102,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2018/273/991/10243199372_1082870435.230x230.jpg',
+                       name:'2019春季新款职业装套装女中袖小西装时尚气质女装名媛酒店工作服',
+                       price: 142,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/574/672/10791276475_1082870435.230x230.jpg',
+                       name:'夏季连衣裙2019新款洋气时尚韩版修身女士OL职业包臀短袖假俩件套',
+                       price: 120,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2017/848/433/5325334848_1082870435.230x230.jpg',
+                       name:'秋装OL职业装女装套装女士条纹西装工作服正装西服外套女工装秋冬',
+                       price: 148,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/788/388/10503883887_1082870435.230x230.jpg',
+                       name:'2019春新款大红色职业套装OL时尚气质长袖不对称主持人西服工作服',
+                       price: 153,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2016/427/371/2773173724_1522162649.230x230.jpg',
+                       name:'韩版新款职业装女套装时尚修身套裙女士美容师职业正装厂家直销',
+                       price: 142,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/479/339/10805933974_1082870435.230x230.jpg',
+                       name:'2019新款职业装女装中袖小西装时尚OL通勤商务白领经理修身工作服',
+                       price: 120,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/780/030/10493030087_1082870435.230x230.jpg',
+                       name:'2019春季新款女士长袖职业白色西服正装女裙套裤面试销售OL工作服',
+                       price: 92,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/244/265/10874562442_1082870435.230x230.jpg',
+                       name:'职业装女装2019新款时尚气质西装套裤工作服春季一扣格子小西装',
+                       price: 115,
+                    },
+                    {
+                       url:'https://cbu01.alicdn.com/img/ibank/2019/242/262/10725262242_1082870435.230x230.jpg',
+                       name:'白衬衫女士短袖职业装2019夏季新款拼接领修身气质正装工作服衬衣',
+                       price: 90,
+                    },
+                ],
+                clothingUrl:[
+                    "https://cbu01.alicdn.com/img/ibank/2019/895/446/10328644598_1082870435.220x220.jpg",
+                    "https://cbu01.alicdn.com/img/ibank/2019/475/401/10387104574_1082870435.230x230.jpg",
+                    "https://cbu01.alicdn.com/img/ibank/2019/436/990/11072099634_1082870435.230x230.jpg"
+                ],
+                index:0
             }
         },
         created(){
-            this.getCategory()
+          
+            
+            this.totalpag = parseInt((this.shopList.length/9)*10)
+            this.choosePage(this.currentPage)
         },
         methods:{
+            cPage(num){
+                this.choosePage(num-1)
+            },
+            choosePage(index){
+                let i = index>0? index : 0
+                let arr = []
+                arr = this.shopList.slice(i*9,i*9+9)
+                this.shopPrve = []
+                this.shopPrve = arr 
+                setTimeout(() => {
+                   this.loading=false
+                }, 500);
+            },
+            prevClick(){
+                this.currentPage = this.currentPage -1
+                this.choosePage(this.currentPage)
+                
+            },
+            nextClick(){
+                 this.currentPage = this.currentPage +1
+                this.choosePage(this.currentPage)
+               
+            },
             getCategory(){
                 axios({
                     url:url.category,
@@ -97,7 +288,8 @@
                 }).catch((err)=>{
                     console.log(err)
                 })
-            }
+            },
+
         },
         components:{Header,Footer},
     }

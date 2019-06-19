@@ -3,8 +3,8 @@
    <Header></Header>
    <div id="content"> 
     <div class="block"> 
-     <el-carousel height="500px"> 
-      <el-carousel-item v-for="(item,index) in sliderImg" :key="index"> 
+     <el-carousel height="500px" style="background-color: white;"> 
+      <el-carousel-item v-for="(item,index) in banner" :key="index"> 
        <router-link to="#">
         <img :src="item" alt="slider" />
        </router-link> 
@@ -16,10 +16,10 @@
       <div class=""> 
        <div class="inter-nav-left"> 
         <h3 class="title"><b title=""> ☆ NEW ARRIVAL ☆ </b></h3> 
-        <a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/19501" title="picture"><img alt="" src="https://pic.lily.sh.cn/PC%E7%AB%AF19%E6%98%A51%E6%B3%A2%E5%B9%BF%E5%91%8A%E4%BD%8D%E5%B7%A6.jpg" /></a>
+        <router-link to="/GoodsMall"><img alt="" src="https://cbu01.alicdn.com/img/ibank/2018/382/232/8552232283_1082870435.jpg" /></router-link>
        </div> 
        <div class="inter-nav-right"> 
-        <a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/21501" title="picture"><img alt="" src="https://pic.lily.sh.cn/PC%E7%AB%AF19%E6%98%A51%E6%B3%A2%E5%B9%BF%E5%91%8A%E4%BD%8D%E5%8F%B3.jpg" /></a>
+        <router-link to="/GoodsMall"><img alt="" src="https://cbu01.alicdn.com/img/ibank/2018/728/259/8571952827_1082870435.jpg" /></router-link>
        </div> 
        <div class="clear"></div> 
       </div> 
@@ -28,29 +28,13 @@
     <div class="inter-middle"> 
      <div class="middle_one"> 
       <ul class="idx-hot showmore"> 
-       <h3 class="title"><b title="最热品类"><span>/</span> ☆ LILY X 国家博物馆 ☆ <span>/</span></b></h3> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/27503"><img alt="" src="https://pic.lily.sh.cn/19%E6%98%A5%E5%9B%BD%E9%A3%8E-1.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/27503"><img alt="" src="https://pic.lily.sh.cn/19%E6%98%A5%E5%9B%BD%E9%A3%8E-2.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/27503"><img alt="" src="https://pic.lily.sh.cn/19%E6%98%A5%E5%9B%BD%E9%A3%8E-3.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/27503"><img alt="" src="https://pic.lily.sh.cn/19%E6%98%A5%E5%9B%BD%E9%A3%8E-4.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/27503"><img alt="" src="https://pic.lily.sh.cn/19%E6%98%A5%E5%9B%BD%E9%A3%8E-5.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/27503"><img alt="" src="https://pic.lily.sh.cn/19%E6%98%A5%E5%9B%BD%E9%A3%8E-6.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/27503"><img alt="" src="https://pic.lily.sh.cn/19%E6%98%A5%E5%9B%BD%E9%A3%8E-7.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/27503"><img alt="" src="https://pic.lily.sh.cn/19%E6%98%A5%E5%9B%BD%E9%A3%8E-8.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/27503"><img alt="" src="https://pic.lily.sh.cn/19%E6%98%A5%E5%9B%BD%E9%A3%8E-9.jpg" /></a></li> 
+       <h3 class="title"><b title="最热品类"><span>/</span> ☆ DAHONG X 优质服装 ☆ <span>/</span></b></h3> 
+       <li v-for="(item,index) in clothingList" :key = "index"><router-link to="/GoodsMall"><img alt="" :src="item" /></router-link></li> 
        <div class="clear"></div> 
       </ul> 
       <ul class="idx-hot showmore"> 
        <h3 class="title"><b title="最热品类"><span>/</span> ☆ CATEGORIES ☆ <span>/</span></b></h3> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/24002"><img more="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E5%A4%A7%E8%A1%A3-1.jpg" alt="" src="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E5%A4%A7%E8%A1%A3.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15505"><img more="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E5%A4%96%E5%A5%97-1.jpg" alt="" src="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E5%A4%96%E5%A5%97.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15504"><img more="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E9%92%88%E7%BB%87-1.jpg" alt="" src="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E9%92%88%E7%BB%87.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15511"><img more="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E8%A1%AC%E8%A1%AB-1.jpg" alt="" src="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E8%A1%AC%E8%A1%AB.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15506"><img more="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E8%BF%9E%E8%A1%A3%E8%A3%99-1.jpg" alt="" src="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E8%BF%9E%E8%A1%A3%E8%A3%99.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/24003"><img more="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E5%A5%97%E5%A4%B4-1.jpg" alt="" src="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E5%A5%97%E5%A4%B4.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15507"><img more="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E8%A3%A4%E5%AD%90-1.jpg" alt="" src="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E8%A3%A4%E5%AD%90.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15510"><img more="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E5%8D%8A%E8%A3%99-1.jpg" alt="" src="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E5%8D%8A%E8%A3%99.jpg" /></a></li> 
-       <li><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/lilystore/15508"><img more="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E9%A5%B0%E5%93%81-1.jpg" alt="" src="https://pic.lily.sh.cn/18%E5%86%AC%E5%93%81%E7%B1%BB%E5%85%A5%E5%8F%A3-%E9%A5%B0%E5%93%81.jpg" /></a></li> 
+       <li v-for="(item,index) in clothingList2" :key = "index"><router-link to="/GoodsMall"><img :src="item" /></router-link></li> 
        <div class="clear"></div> 
       </ul> 
      </div> 
@@ -60,9 +44,9 @@
         <div data-am-widget="slider" class="am-slider am-slider-default am-no-layout" data-am-slider="{&quot;controlNav&quot;:true}"> 
          <div class="am-viewport" style="overflow: hidden; position: relative;">
           <ul class="am-slides" style="width: 600%; transition-duration: 0s; transform: translate3d(-960px, 0px, 0px);">
-           <li style="width: 960px; float: left; display: block;" class="clone" aria-hidden="true"><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/pointshop" title="picture"><img alt="" src="https://pic.lily.sh.cn/%E5%BA%95%E9%A1%B52.jpg" draggable="false" /></a></li> 
-           <li style="width: 960px; float: left; display: block;" class="am-active-slide"><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/pointshop" title="picture"><img alt="" src="https://pic.lily.sh.cn/%E5%BA%95%E9%A1%B52.jpg" draggable="false" /></a></li> 
-           <li style="width: 960px; float: left; display: block;" class="clone" aria-hidden="true"><a href="http://www.lily.sh.cn/webapp/wcs/stores/servlet/pointshop" title="picture"><img alt="" src="https://pic.lily.sh.cn/%E5%BA%95%E9%A1%B52.jpg" draggable="false" /></a></li>
+           <li style="width: 960px; float: left; display: block;" class="clone" aria-hidden="true"><a href="#" title="picture"><img alt="" src="https://pic.lily.sh.cn/%E5%BA%95%E9%A1%B52.jpg" draggable="false" /></a></li> 
+           <li style="width: 960px; float: left; display: block;" class="am-active-slide"><a href="#" title="picture"><img alt="" src="https://pic.lily.sh.cn/%E5%BA%95%E9%A1%B52.jpg" draggable="false" /></a></li> 
+           <li style="width: 960px; float: left; display: block;" class="clone" aria-hidden="true"><a href="#" title="picture"><img alt="" src="https://pic.lily.sh.cn/%E5%BA%95%E9%A1%B52.jpg" draggable="false" /></a></li>
           </ul>
          </div>
          <ol class="am-control-nav am-control-paging"></ol>
@@ -90,6 +74,35 @@
         options4: [],
         value9: [],
         list: [],
+        banner:[
+            "http://www.zgmypfzx.com/data/201703/170328115006564.jpg",
+            "http://www.zgmypfzx.com/data/201704/170409160543811.jpg",
+            "http://www.zgmypfzx.com/data/201703/170328114940324.jpg"
+        ],
+        clothingList:[
+          "https://cbu01.alicdn.com/img/ibank/2019/466/941/10540149664_1082870435.220x220.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2018/393/284/9391482393_1082870435.220x220.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2018/213/021/9390120312_1082870435.220x220.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2018/418/439/9347934814_1082870435.220x220.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2018/799/468/9331864997_1082870435.220x220.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2018/296/495/9424594692_1082870435.220x220.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2019/241/556/10417655142_1082870435.220x220.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2019/727/120/10478021727_1082870435.220x220.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2019/584/288/10436882485_1082870435.220x220.jpg",
+
+
+        ],
+        clothingList2:[
+          "https://cbu01.alicdn.com/img/ibank/2018/922/204/8754402229_1082870435.230x230.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2019/921/477/10417774129_1082870435.230x230.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2019/629/381/10485183926_1082870435.230x230.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2019/709/160/10547061907_1082870435.230x230.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2018/645/926/8542629546_1082870435.230x230.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2017/774/671/4131176477_1082870435.230x230.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2019/830/246/10693642038_1082870435.230x230.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2019/485/176/10432671584_1082870435.230x230.jpg",
+          "https://cbu01.alicdn.com/img/ibank/2018/558/345/8628543855_1082870435.230x230.jpg",
+        ],
         loading: false,
         states: ["Alabama"]
       }
@@ -140,6 +153,7 @@
     }
     .idx-hot li img {
     width: 100%;
+    height: 306px;
     }
     .inter-middle{
             width: 1009px;
@@ -206,7 +220,7 @@
             img{
                 width: 100%;
                 display: block;
-                height: 580px;
+                height: 634px;
                 }
         }
 
@@ -227,6 +241,10 @@
             }
         }
 
+    }
+   /deep/ .el-carousel__item{
+      background-color: white !important;
+      text-align: center;
     }
     .el-carousel__item h3 {
         color: #475669;
